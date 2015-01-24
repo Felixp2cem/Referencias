@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text">
+  <info>
+    <title>ABNT-UFS-P2CEM-NUMERICO</title>
+    <id>http://csl.mendeley.com/styles/16401973/ABNT-UFS-P2CEM-NUMERICO</id>
+    <author>
+      <name>Thiago Viana Camata</name>
+    </author>
+    <updated>2015-01-24T04:18:41+00:00</updated>
+  </info>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <choose>
+        <if type="chapter paper-conference" match="any">
+          <text variable="citation-number" prefix="" suffix="    "/>
+          <names variable="author" prefix="" suffix=" ">
+            <name et-al-min="3" et-al-use-first="2" delimiter=", " name-as-sort-order="all" sort-separator=", " form="long" initialize-with="."/>
+          </names>
+          <text variable="title" prefix="" suffix=". "/>
+          <group delimiter="" prefix="" suffix="">
+            <text value="In:" prefix="" suffix=" "/>
+            <names variable="editor" prefix="" suffix=" (Ed.); ">
+              <name et-al-min="3" et-al-use-first="2" delimiter=", " form="long" initialize-with=""/>
+            </names>
+            <text variable="container-title" prefix="" suffix=". " font-weight="bold"/>
+            <text variable="publisher" prefix="" suffix=": "/>
+            <names variable="author" prefix="" suffix=", ">
+              <name delimiter="; " form="long" initialize-with=""/>
+            </names>
+            <group delimiter="" prefix="" suffix="">
+              <text variable="volume" prefix="v." suffix="."/>
+              <date variable="issued" prefix="" suffix=", ">
+                <date-part name="year" form="long" prefix="" suffix=""/>
+              </date>
+            </group>
+          </group>
+          <text variable="page" prefix="p. " suffix="."/>
+        </if>
+        <else-if type="article-journal">
+          <text variable="citation-number" text-case="capitalize-all" prefix="[" suffix="]    "/>
+          <group>
+            <text macro="author"/>
+            <names variable="author" suffix=" ">
+              <name delimiter="; " delimiter-precedes-last="always" et-al-min="3" et-al-use-first="3" initialize-with="." name-as-sort-order="all">
+                <name-part name="family" text-case="uppercase"/>
+                <name-part name="given" text-case="uppercase"/>
+              </name>
+            </names>
+            <text variable="title" font-style="normal" prefix="&quot;" suffix="&quot;. "/>
+          </group>
+          <group delimiter=", " prefix="" suffix=", ">
+            <text variable="container-title" font-style="italic" font-weight="normal"/>
+            <group delimiter=", " prefix="" suffix="">
+              <text variable="volume" prefix="v. " suffix=""/>
+              <text variable="issue" prefix="n. " suffix=""/>
+            </group>
+            <text variable="page" prefix="pp. "/>
+          </group>
+          <date variable="issued" prefix="" suffix=".">
+            <date-part name="year" form="long" prefix="" suffix=""/>
+          </date>
+        </else-if>
+        <else-if type="bill book graphic legal_case motion_picture report song" match="any">
+          <text variable="citation-number" prefix="[" suffix="]    "/>
+          <names variable="author" prefix="" suffix=" ">
+            <name font-variant="normal" delimiter="; " et-al-min="3" et-al-use-first="2" initialize-with="." name-as-sort-order="all">
+              <name-part name="family" text-case="uppercase"/>
+              <name-part name="given" text-case="uppercase"/>
+            </name>
+          </names>
+          <text variable="title" font-style="normal" font-weight="normal" prefix="&quot;" suffix="&quot;. "/>
+          <group delimiter="" prefix="" suffix=".">
+            <text variable="publisher-place" font-style="italic" suffix=": "/>
+            <names variable="editor" prefix="" suffix=", ">
+              <name delimiter="; " form="long" initialize-with=""/>
+            </names>
+            <date variable="issued" prefix="" suffix="">
+              <date-part name="year" form="long" prefix="" suffix=""/>
+            </date>
+          </group>
+          <text variable="page" prefix="" suffix="p. "/>
+        </else-if>
+        <else-if type="paper-conference">
+          <text variable="citation-number" prefix="" suffix="    "/>
+          <names variable="author" prefix="" suffix=" ">
+            <name et-al-min="3" et-al-use-first="2" and="symbol" delimiter=", " name-as-sort-order="all" sort-separator=", " form="long" initialize-with="."/>
+          </names>
+          <text variable="title" prefix="" suffix=". " font-weight="bold"/>
+          <group delimiter=", " prefix="" suffix=". ">
+            <text variable="event" prefix="" suffix=" "/>
+            <text variable="event-place" prefix="" suffix=": "/>
+            <names variable="author" prefix="" suffix=" ">
+              <name et-al-min="3" et-al-use-first="2" delimiter="; " form="long" initialize-with=""/>
+            </names>
+            <date variable="event-date" prefix="" suffix=" ">
+              <date-part name="year" form="long" prefix="" suffix=""/>
+            </date>
+          </group>
+          <text variable="page" prefix="" suffix="p. "/>
+        </else-if>
+        <else>
+          <names variable="author" prefix="" suffix=" ">
+            <name and="symbol" delimiter=", " name-as-sort-order="all" sort-separator=", " form="long" initialize-with="."/>
+          </names>
+          <date variable="issued" prefix="(" suffix="). ">
+            <date-part name="year" form="long" prefix="" suffix=""/>
+          </date>
+          <text variable="title" prefix="" suffix=". "/>
+          <group delimiter=", " prefix="" suffix=". ">
+            <text variable="container-title" prefix="" suffix="" font-style="italic"/>
+            <group delimiter="" prefix="" suffix="">
+              <text variable="volume" prefix="" suffix=""/>
+              <text variable="issue" prefix="(" suffix=") "/>
+            </group>
+            <text variable="page" prefix="" suffix=""/>
+          </group>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
